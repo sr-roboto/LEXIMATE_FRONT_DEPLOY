@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiMate</title>
+    <link rel="stylesheet" href="/FRONTEND/CSS/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search messages or users">
+            </div>
+            <div class="contacts">
+                <h2>Chats</h2>
+                <div class="recent">
+                    <h3>Recientes</h3>
+                    <ul id="contacts">
+                        <li onclick="openChat('CONTACTO 1')">CONTACTO 1</li>
+                        <li onclick="openChat('CONTACTO 2')">CONTACTO 2</li>
+                        <li onclick="openChat('CONTACTO 3')">CONTACTO 3</li>
+                        <!-- Agregar más contactos según sea necesario -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 id="chat-with">Chat con: </h3>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensajes del chat aparecerán aquí -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="message-input" placeholder="Enter message...">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/FRONTEND/js/chat.js"></script>
+</body>
+</html>

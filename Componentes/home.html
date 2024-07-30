@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiMate</title>
+    <link rel="stylesheet" href="/FRONTEND/CSS/home.css">
+    <link rel="stylesheet" href="/FRONTEND/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #000000;">
+            <div class="container">
+                <img src="/FRONTEND/assets/logo-leximate.png"  alt="" width="200" height="50">
+                <button class="navbar-toggler text-white border-0 rounded" style="background-color: transparent;"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menú
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="navbar-collapse justify-content-center" id="navbarResponsive">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <!-- Opción "Chat" centrada -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="chat.html">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Perfil de usuario a la derecha -->
+                <div class="navbar-nav ms-auto">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/FRONTEND/assets/default-profile.png" alt="User Profile" class="rounded-circle" width="50" height="50">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración de cuenta</a></li>
+                            <li><button class="dropdown-item" id="btnLogOff" onclick="event.preventDefault(); logOff();">CERRAR SESIÓN</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="mt-5 pt-5" id="cursos">
+        <section id="courses"> 
+            <div class="container">
+                <h2 class="text-center">Tus Cursos</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Matemáticas</h3>
+                                <p class="card-text"><b>TIENES TRABAJOS PENDIENTES</b></p>
+                                <button class="btn btn-primary" onclick="window.location.href='matematicas.html'">Ver curso</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Lengua</h3>
+                                <p class="card-text">No hay trabajos pendientes</p>
+                                <button class="btn btn-primary" onclick="window.location.href='ciencias.html'">Ver curso</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Historia</h3>
+                                <p class="card-text">No hay trabajos pendientes</p>
+                                <button class="btn btn-primary" onclick="window.location.href='historia.html'">Ver curso</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Sección de Juegos Interactivos -->
+        <section id="games" class="py-5" style="background-color: #fffd97;">
+            <div class="container">
+                <h2 class="text-center">Juegos Interactivos</h2>
+                <div class="row justify-content-center" >
+                    
+                    <div class="col-lg-4 col-md-6 mb-4" id="card-container">
+                        <div class="card h-100">
+                            <div class="card-body" id="card-game">
+                                <h3 class="card-title">Juego 1</h3>
+                                <img class="img-fluid mb-5 rounded" src="/FRONTEND/assets/3c8488bb47a14f892dcd7a96698d077a.jpg" alt="">
+                                <button class="btn btn-primary">Jugar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4" id="card-container">
+                        <div class="card h-100">
+                            <div class="card-body" id="card-game">
+                                <h3 class="card-title">Juego 2</h3>
+                                <img class="img-fluid mb-5 rounded" src="/FRONTEND/assets/3c8488bb47a14f892dcd7a96698d077a.jpg" alt="">
+                                <button class="btn btn-primary">Jugar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4" id="card-container">
+                        <div class="card h-100" >
+                            <div class="card-body" id="card-game">
+                                <h3 class="card-title">Juego 3</h3>
+                                <img class="img-fluid mb-5 rounded" src="/FRONTEND/assets/3c8488bb47a14f892dcd7a96698d077a.jpg" alt="">
+                                <button class="btn btn-primary">Jugar</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/FRONTEND/js/auth.js"></script>
+    <script src="/FRONTEND/js/home.js"></script>
+</body>
+
+</html>
