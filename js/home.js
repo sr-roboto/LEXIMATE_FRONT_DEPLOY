@@ -1,5 +1,5 @@
 function logOff(){
     
-        window.location.href = '/FRONTEND/Componentes/iniciarSesion.html'
+        window.location.href = "../Componentes/iniciarSesion.html"
 }
 

@@ -56,5 +56,5 @@ const form = document.getElementById('form');
 form.addEventListener('submit', register);
 
 function btnBack() {
-    window.location.href = '/FRONTEND/Componentes/iniciarSesion.html'; // Ruta a donde quieras redirigir después de cerrar el modal
+    window.location.href = "../Componentes/iniciarSesion.html"; // Ruta a donde quieras redirigir después de cerrar el modal
 }

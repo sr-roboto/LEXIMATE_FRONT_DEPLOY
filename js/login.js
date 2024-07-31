@@ -23,7 +23,7 @@ const login = async (e) => {
             $('#myModal').modal('show'); // Mostrar modal de error
         } else {
             localStorage.setItem('token', respuesta.token);
-            window.location.href = '/FRONTEND/Componentes/home.html';
+            window.location.href = "../Componentes/home.html";
         }
     } catch (error) {
         console.error('Error al intentar iniciar sesión:', error);
