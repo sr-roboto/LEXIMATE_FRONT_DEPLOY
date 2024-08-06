@@ -1,21 +1,21 @@
 // ### VARIABLES ###
 
 // Array de palabras
-var palabras = [["atlantico", "Un océano"], ["ordenador", "Una máquina"], ["laurel", "Un árbol"], ["plaza", "Espacio público"], ["rueda", "Gran invento"], ["cereza", "Una fruta"], ["petanca", "Un juego"], ["higuera", "Un árbol"], ["everest", "Un monte"], ["relampago", "Antecede al trueno"], ["jirafa", "Un animal"], ["luxemburgo", "Un país"], ["uruguay", "Un país"], ["ilustracion", "Representación gráfica"], ["excursion", "Actividad en la naturaleza"], ["empanadilla", "De la panadería"], ["pastel", "De la pastelería"], ["colegio", "Lugar para estudiar"], ["carrera", "Competición"], ["mermelada", "Confitura"]];
+let palabras = [["atlantico", "Un océano"], ["ordenador", "Una máquina"], ["laurel", "Un árbol"], ["plaza", "Espacio público"], ["rueda", "Gran invento"], ["cereza", "Una fruta"], ["petanca", "Un juego"], ["higuera", "Un árbol"], ["everest", "Un monte"], ["relampago", "Antecede al trueno"], ["jirafa", "Un animal"], ["luxemburgo", "Un país"], ["uruguay", "Un país"], ["ilustracion", "Representación gráfica"], ["excursion", "Actividad en la naturaleza"], ["empanadilla", "De la panadería"], ["pastel", "De la pastelería"], ["colegio", "Lugar para estudiar"], ["carrera", "Competición"], ["mermelada", "Confitura"]];
 // Palabra a averiguar
-var palabra = "";
+let palabra = "";
 // Nº aleatorio
-var rand;
+let rand;
 // Palabra oculta
-var oculta = [];
+let oculta = [];
 // Elemento html de la palabra
-var hueco = document.getElementById("palabra");
+let hueco = document.getElementById("palabra");
 // Contador de intentos
-var cont = 6;
+let cont = 6;
 // Botones de letras
-var buttons = document.getElementsByClassName('letra');
+let buttons = document.getElementsByClassName('letra');
 // Boton de reset
-var btnInicio = document.getElementById("reset");
+let btnInicio = document.getElementById("reset");
 
 
 // ### FUNCIONES ###
@@ -29,7 +29,7 @@ function generaPalabra() {
 
 // Funcion para pintar los guiones de la palabra
 function pintarGuiones(num) {
-  for (var i = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     oculta[i] = "_";
   }
   hueco.innerHTML = oculta.join("");
@@ -38,13 +38,13 @@ function pintarGuiones(num) {
 //Generar abecedario
 function generaABC (a,z) {
   document.getElementById("abcdario").innerHTML = "";
-  var i = a.charCodeAt(0), j = z.charCodeAt(0);
-  var letra = "";
+  let i = a.charCodeAt(0), j = z.charCodeAt(0);
+  let letra = "";
   for( ; i<=j; i++) {
     letra = String.fromCharCode(i).toUpperCase();
-    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra' id='"+letra+"'>" + letra + "</button>";
+    document.getElementById("abcdario").innerHTML += "<button value='" + letra + "' onclick='intento(\"" + letra + "\")' class='letra m-1' id='"+letra+"'>" + letra + "</button>";
     if(i==110) {
-      document.getElementById("abcdario").innerHTML += "<button value='Ñ' onclick='intento(\"Ñ\")' class='letra' id='"+letra+"'>Ñ</button>";
+      document.getElementById("abcdario").innerHTML += "<button value='Ñ' onclick='intento(\"Ñ\")' class='letra m-1' id='"+letra+"'>Ñ</button>";
     }
   }
 }
