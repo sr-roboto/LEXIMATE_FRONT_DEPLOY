@@ -1,108 +1,72 @@
-/* styles.css */
-
-/* Ajustes generales */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Evita el scroll horizontal */
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif;
-  background-color: #fffd97;
+  background-color: #343a40; /* Fondo negro */
+  color: #ffc107; /* Texto de color warning */
 }
 
-header {
-  background-color: #000;
-  color: white;
-  padding: 1rem;
-  width: 100%;
+.card {
+  transition: transform 0.2s;
 }
 
-main {
-  flex: 1;
-  padding: 2rem;
-  text-align: center;
+.card:hover {
+  transform: scale(1.05);
 }
 
-#welcome {
-  margin-bottom: 2rem;
+.navbar {
+  padding: 1rem 2rem;
 }
 
-#courses {
-  text-align: center;
-}
-
-.course-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.course-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
-  margin: 1rem;
-  width: calc(33.33% - 2rem); /* Ajusta el ancho para evitar desbordamiento */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.course-card h3 {
-  margin-top: 0;
-}
-
-.course-card p {
-  color: #555;
-}
-
-.course-card button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.course-card button:hover {
-  background-color: #45a049;
-}
-
-/* Ajuste del dropdown de perfil */
-.nav-item.dropdown .dropdown-menu {
-  left: auto;
-  right: 0;
-}
-
-#card-game{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#card-game img{
-  height: 100px;
-  width: 100px;
-}
-
-#card-container{
+.navbar-brand img {
   width: 200px;
-  margin: 1cm;
+  height: auto;
 }
 
-/* Asegura que no haya desbordamiento en dispositivos móviles */
-@media (max-width: 768px) {
-  .course-card {
-      width: calc(100% - 2rem);
-  }
+.nav-link {
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.divider-custom {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.divider-custom-line {
+  flex: 1;
+  height: 1px;
+  background-color: #ffc107;
+}
+
+.divider-custom-icon {
+  padding: 0 1rem;
+  color: #ffc107;
+  font-size: 2rem;
+}
+
+.btn-warning {
+  color: #343a40;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.btn-warning:hover {
+  color: #343a40;
+  background-color: #e0a800;
+  border-color: #d39e00;
+}
+
+.btn-dark {
+  color: #ffc107;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.btn-dark:hover {
+  color: #ffc107;
+  background-color: #23272b;
+  border-color: #1d2124;
 }

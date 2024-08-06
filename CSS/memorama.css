@@ -1,0 +1,13 @@
+body {
+    background-color: #343a40; /* Color de fondo negro */
+    color: #ffc107; /* Color de texto warning */
+}
+
+img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.02);
+}

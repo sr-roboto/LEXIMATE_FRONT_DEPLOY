@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/ahorcado.css">
+</head>
+<body class="bg-dark text-warning">
+    <header>
+        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #000000;">
+            <div class="container">
+                <img src="/LEXIMATE-FRONT/assets/logo-leximate.png" alt="" width="200" height="50">
+                <button class="navbar-toggler text-white border-0 rounded" style="background-color: transparent;"
+                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menú
+                    <i class="fas fa-bars text-white"></i>
+                </button>
+                <div class="navbar-collapse justify-content-center" id="navbarResponsive">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <!-- Opción "Chat" centrada -->
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="chat.html">Chat</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Perfil de usuario a la derecha -->
+                <div class="navbar-nav ms-auto">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="/LEXIMATE-FRONT/assets/default-profile.png" alt="User Profile"
+                                class="rounded-circle" width="50" height="50">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" id="userProfileLink" href="#"></a></li>
+                            <li><a class="dropdown-item" href="#">Configuración de cuenta</a></li>
+                            <li><button class="dropdown-item" id="btnLogOff"
+                                    onclick="event.preventDefault(); logOff();">CERRAR SESIÓN</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container text-center py-5">
+        <h1 class="titulo">Juego del ahorcado</h1>
+        <h1 id="msg-final"></h1>
+        <h3 id="acierto"></h3>
+        <div class="flex-row no-wrap">
+            <h2 class="palabra" id="palabra"></h2>
+            <picture>
+                <img src="../assets/ahorcado/img/ahorcado_6.png" alt="" id="image6">
+                <img src="../assets/ahorcado/img/ahorcado_5.png" alt="" id="image5">
+                <img src="../assets/ahorcado/img/ahorcado_4.png" alt="" id="image4">
+                <img src="../assets/ahorcado/img/ahorcado_3.png" alt="" id="image3">
+                <img src="../assets/ahorcado/img/ahorcado_2.png" alt="" id="image2">
+                <img src="../assets/ahorcado/img/ahorcado_1.png" alt="" id="image1">
+                <img src="../assets/ahorcado/img/ahorcado_0.png" alt="" id="image0">
+            </picture>
+        </div>
+        <div class="flex-row" id="turnos">
+            <div class="col">
+                <h3>Intentos restantes: <span id="intentos">6</span></h3>
+            </div>
+            <div class="col">
+                <button class="btn btn-warning m-2" onclick="inicio()" id="reset">Elegir otra palabra</button>
+                <button class="btn btn-warning m-2" onclick="pista()" id="pista">Dame una pista!</button>
+                <span id="hueco-pista"></span>
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="col">
+                <div class="flex-row" id="abcdario">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/ahorcado.js"></script>
+</body>
+</html>
