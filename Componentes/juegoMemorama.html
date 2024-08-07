@@ -9,44 +9,42 @@
     <link rel="stylesheet" href="../CSS/memorama.css">
 </head>
 <body class="bg-dark text-warning">
-	<header>
-        <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #000000;">
-            <div class="container">
-                <img src="/LEXIMATE-FRONT/assets/logo-leximate.png" alt="" width="200" height="50">
-                <button class="navbar-toggler text-white border-0 rounded" style="background-color: transparent;"
-                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menú
-                    <i class="fas fa-bars text-white"></i>
-                </button>
-                <div class="navbar-collapse justify-content-center" id="navbarResponsive">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <!-- Opción "Chat" centrada -->
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="chat.html">Chat</a>
-                        </li>
+    <nav class="mb-4 navbar navbar-expand-lg text-uppercase" id="mainNav" style="background-color: #000000;">
+        <div class="container">
+            <img src="/LEXIMATE-FRONT/assets/logo-leximate.png" alt="" width="200" height="50">
+            <button class="navbar-toggler text-white border-0 rounded" style="background-color: transparent;"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menú
+                <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="navbar-collapse justify-content-center" id="navbarResponsive">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <!-- Opción "Chat" centrada -->
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="chat.html">Chat</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Perfil de usuario a la derecha -->
+            <div class="navbar-nav ms-auto">
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="/LEXIMATE-FRONT/assets/default-profile.png" alt="User Profile"
+                            class="rounded-circle" width="50" height="50">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" id="userProfileLink" href="#"></a></li>
+                        <li><a class="dropdown-item" href="#">Configuración de cuenta</a></li>
+                        <li><button class="dropdown-item" id="btnLogOff"
+                                onclick="event.preventDefault(); logOff();">CERRAR SESIÓN</button></li>
                     </ul>
                 </div>
-                <!-- Perfil de usuario a la derecha -->
-                <div class="navbar-nav ms-auto">
-                    <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="/LEXIMATE-FRONT/assets/default-profile.png" alt="User Profile"
-                                class="rounded-circle" width="50" height="50">
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                            <li><a class="dropdown-item" id="userProfileLink" href="#"></a></li>
-                            <li><a class="dropdown-item" href="#">Configuración de cuenta</a></li>
-                            <li><button class="dropdown-item" id="btnLogOff"
-                                    onclick="event.preventDefault(); logOff();">CERRAR SESIÓN</button></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </nav>
-    </header>
-    <div class="container mt-5">
+        </div>
+    </nav>
+    <div class="w-50 container">
         <div class="row justify-content-center">
             <div class="col-3">
                 <img src="/LEXIMATE-FRONT/assets/memorama/img/card.png" alt="reverso" class="heart img-fluid">
@@ -76,6 +74,7 @@
             </div>
         </div>
     </div>
+    
     <script src="../js/memorama.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
