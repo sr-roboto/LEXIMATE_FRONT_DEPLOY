@@ -1,10 +1,12 @@
-const form = document.getElementById('form');
+const form = document.getElementById('form-and-image-cont');
 
 const login = async (e) => {
     e.preventDefault();
 
-    const emailUsuario = document.getElementById('userEmail').value;
-    const contrasenia = document.getElementById('pwd').value;
+    const emailUsuario = document.querySelector('.userEmail').value;
+    const contrasenia = document.querySelector('.pwd').value;
+
+    
 
     const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
@@ -25,6 +27,7 @@ const login = async (e) => {
             localStorage.setItem('token', respuesta.token);
             window.location.href = "../Componentes/home.html";
         }
+    
     } catch (error) {
         console.error('Error al intentar iniciar sesión:', error);
         alert('Hubo un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde.');

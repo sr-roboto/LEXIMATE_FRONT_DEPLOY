@@ -9,35 +9,62 @@
     />
 
     <title>LexiMate</title>
-    <link rel="icon" type="image/x-icon" href="/LEXIMATE-FRONT/assets/logo-leximate.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/LEXIMATE-FRONT/assets/logo-leximate.png"
+    />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   </head>
   <body>
-    <div class="relative flex size-full min-h-screen flex-col bg-[#fcfcf8] group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#fcfcf8] group/design-root overflow-x-hidden"
+      style="font-family: Lexend, 'Noto Sans', sans-serif"
+    >
       <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f4e7] px-10 py-3" style="background-color: #f8f40c;">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f4e7] px-10 py-3"
+          style="background-color: #f8f40c"
+        >
           <div class="flex items-center gap-4 text-[#1c1c0d]">
             <div class="size-4 w-10 h-10">
-                <img src="./assets/logo-leximate.png" alt="Descripción de la imagen">
+              <img
+                src="./assets/logo-leximate.png"
+                alt="Descripción de la imagen"
+              />
             </div>
-            <h2 class="text-[#1c1c0d] text-lg font-bold leading-tight tracking-[-0.015em]">LexiMate</h2>
+            <h2
+              class="text-[#1c1c0d] text-lg font-bold leading-tight tracking-[-0.015em]"
+            >
+              LexiMate
+            </h2>
           </div>
           <div class="flex gap-2">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f4e7] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em]"
-            >
-              <span class="truncate">Login</span>
-            </button>
+            <a href="/LEXIMATE-FRONT/Componentes/iniciarSesion.html">
+              <button
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f4e7] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Iniciar sesión</span>
+              </button>
+            </a>
           </div>
         </header>
         <div class="px-40 flex flex-1 justify-center py-5">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <div
+            class="layout-content-container flex flex-col max-w-[960px] flex-1"
+          >
             <div class="@container">
               <div class="@[480px]:p-4">
                 <div
                   class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
-                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("./assets/LEXIMATE.jpg");'
+                  style="
+                    background-image: linear-gradient(
+                        rgba(0, 0, 0, 0.1) 0%,
+                        rgba(0, 0, 0, 0.4) 100%
+                      ),
+                      url('./assets/LEXIMATE.jpg');
+                  "
                 >
                   <div class="flex flex-col gap-2 text-left">
                     <h1
@@ -45,15 +72,19 @@
                     >
                       Bienvenido a LexiMate
                     </h1>
-                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                    <h2
+                      class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                    >
                       En cada obstáculo, encuentra una oportunidad.
                     </h2>
                   </div>
-                  <button
-                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f2f20d] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
-                  >
-                    <span class="truncate">Empieza ahora!</span>
-                  </button>
+                  <a href="/LEXIMATE-FRONT/Componentes/register.html">
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f2f20d] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                    >
+                      <span class="truncate">Empieza ahora!</span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -63,60 +94,83 @@
               >
                 Qué ofrecemos?
               </h1>
-              <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
+              <div
+                class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3"
+              >
                 <div class="flex flex-col gap-3 pb-3">
                   <div
                     class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("./assets/conexion-educativa.jpeg");'
+                    style="
+                      background-image: url('./assets/conexion-educativa.jpeg');
+                    "
                   ></div>
                   <div>
-                    <p class="text-[#1c1c0d] text-base font-medium leading-normal">Conexión educativa</p>
-                    <p class="text-[#9c9c49] text-sm font-normal leading-normal">
-                        Mantenemos a los
-                        estudiantes en contacto con sus profesores y
-                        compañeros de clase, permitiendo recibir tareas,
-                        compartir recursos y facilitar una comunicación
-                        fluida y efectiva.
+                    <p
+                      class="text-[#1c1c0d] text-base font-medium leading-normal"
+                    >
+                      Conexión educativa
+                    </p>
+                    <p
+                      class="text-[#9c9c49] text-sm font-normal leading-normal"
+                    >
+                      Mantenemos a los estudiantes en contacto con sus
+                      profesores y compañeros de clase, permitiendo recibir
+                      tareas, compartir recursos y facilitar una comunicación
+                      fluida y efectiva.
                     </p>
                   </div>
                 </div>
                 <div class="flex flex-col gap-3 pb-3">
                   <div
                     class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("./assets/juegos-interactivos.jpg");'
+                    style="
+                      background-image: url('./assets/juegos-interactivos.jpg');
+                    "
                   ></div>
                   <div>
-                    <p class="text-[#1c1c0d] text-base font-medium leading-normal">Juegos interactivos</p>
-                    <p class="text-[#9c9c49] text-sm font-normal leading-normal">
-                        Proponemos una serie de
-                        juegos diseñados específicamente para ejercitar la
-                        comprensión lectora, la memoria y otras
-                        habilidades clave.
+                    <p
+                      class="text-[#1c1c0d] text-base font-medium leading-normal"
+                    >
+                      Juegos interactivos
+                    </p>
+                    <p
+                      class="text-[#9c9c49] text-sm font-normal leading-normal"
+                    >
+                      Proponemos una serie de juegos diseñados específicamente
+                      para ejercitar la comprensión lectora, la memoria y otras
+                      habilidades clave.
                     </p>
                   </div>
                 </div>
                 <div class="flex flex-col gap-3 pb-3">
                   <div
                     class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl"
-                    style='background-image: url("./assets/apoyo-global.jpg");'
+                    style="background-image: url('./assets/apoyo-global.jpg')"
                   ></div>
                   <div>
-                    <p class="text-[#1c1c0d] text-base font-medium leading-normal">Red de apoyo global</p>
-                    <p class="text-[#9c9c49] text-sm font-normal leading-normal">
-                        Fomentamos la creación de
-                        una comunidad Global donde personas con dislexia
-                        puedan conectarse, compartir experiencias y
-                        apoyarse mutuamente. Queremos que nuestros
-                        usuarios se sientan acompañados y comprendidos,
-                        sin importar dónde se encuentren.
+                    <p
+                      class="text-[#1c1c0d] text-base font-medium leading-normal"
+                    >
+                      Red de apoyo global
+                    </p>
+                    <p
+                      class="text-[#9c9c49] text-sm font-normal leading-normal"
+                    >
+                      Fomentamos la creación de una comunidad Global donde
+                      personas con dislexia puedan conectarse, compartir
+                      experiencias y apoyarse mutuamente. Queremos que nuestros
+                      usuarios se sientan acompañados y comprendidos, sin
+                      importar dónde se encuentren.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="@container">
-              <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-                <div class="flex justify-center  gap-2 text-center">
+              <div
+                class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20"
+              >
+                <div class="flex justify-center gap-2 text-center">
                   <h1
                     class="text-[#1c1c0d] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]"
                   >
@@ -125,35 +179,35 @@
                 </div>
                 <div class="flex flex-1 justify-center">
                   <div class="flex justify-center">
-                    <button
-                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f2f20d] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
-                    >
-                      <span class="truncate">Registrarse</span>
-                    </button>
+                    <a href="/LEXIMATE-FRONT/Componentes/register.html">
+                      <button
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#f2f20d] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow"
+                      >
+                        <span class="truncate">Registrarse</span>
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            <h2 class="text-[#1c1c0d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Acerca de nosotros</h2>
-            <p class="text-[#1c1c0d] text-base font-normal leading-normal pb-3 pt-1 px-4">
-                Nacimos con el objetivo de romper
-                barreras y crear un entorno accesible
-                para todas las personas con dislexia.
-                Entendemos los desafíos diarios que
-                enfrentan tanto en el ámbito académico
-                como en su vida cotidiana, y por eso
-                hemos desarrollado una plataforma
-                integral que ofrece soluciones prácticas
-                y efectivas.
-                En Leximate, estamos comprometidos
-                con la innovación continua y la inclusión.
-                Trabajamos de la mano con expertos en
-                educación y tecnología para asegurarnos
-                de que nuestra aplicación sea una
-                herramienta efectiva y fácil de usar.
-                Creemos que, con el apoyo adecuado,
-                todos pueden alcanzar su máximo
-                potencial.
+            <h2
+              class="text-[#1c1c0d] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5"
+            >
+              Acerca de nosotros
+            </h2>
+            <p
+              class="text-[#1c1c0d] text-base font-normal leading-normal pb-3 pt-1 px-4"
+            >
+              Nacimos con el objetivo de romper barreras y crear un entorno
+              accesible para todas las personas con dislexia. Entendemos los
+              desafíos diarios que enfrentan tanto en el ámbito académico como
+              en su vida cotidiana, y por eso hemos desarrollado una plataforma
+              integral que ofrece soluciones prácticas y efectivas. En Leximate,
+              estamos comprometidos con la innovación continua y la inclusión.
+              Trabajamos de la mano con expertos en educación y tecnología para
+              asegurarnos de que nuestra aplicación sea una herramienta efectiva
+              y fácil de usar. Creemos que, con el apoyo adecuado, todos pueden
+              alcanzar su máximo potencial.
             </p>
           </div>
         </div>
