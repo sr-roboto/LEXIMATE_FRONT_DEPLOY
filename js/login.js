@@ -1,4 +1,4 @@
-const form = document.getElementById('form-and-image-cont');
+const form = document.getElementById('form-cont');
 
 const login = async (e) => {
     e.preventDefault();
@@ -6,7 +6,7 @@ const login = async (e) => {
     const emailUsuario = document.querySelector('.userEmail').value;
     const contrasenia = document.querySelector('.pwd').value;
 
-    
+    console.log(emailUsuario, contrasenia);
 
     const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
