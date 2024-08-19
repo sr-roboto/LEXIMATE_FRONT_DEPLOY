@@ -1,0 +1,30 @@
+#inp-form{
+    border: 1px solid gray;
+}
+
+#inp-form:focus{
+    border: 2px solid black;
+}
+
+#img-register {
+    width: 50%;
+    background-image: url("../assets/LEXIMATE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 8px;
+}
+
+
+@media (max-width: 1105px){
+    #form-and-image-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    #form-cont{
+        max-height: 50%;
+    }
+    
+}
