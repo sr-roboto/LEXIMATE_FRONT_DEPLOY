@@ -30,21 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Realizar petición al servidor
-    const peticion = await fetch('http://localhost:3000/register', {
-      method: 'POST',
-      body: JSON.stringify({
-        NombreUsuario: nombre,
-        ApellidoUsuario: apellido,
-        Email: correo,
-        Genero: genero,
-        FechaNacimiento: fechaNacimiento,
-        Pais: pais,
-        Contrasenia: contrasenia,
-      }),
-      headers: {
-        'Content-type': 'application/json',
-      },
-    });
+    const peticion = await fetch(
+      'https://github.com/sr-roboto/LEXIMATE_FRONT_DEPLOY.git/register',
+      {
+        method: 'POST',
+        body: JSON.stringify({
+          NombreUsuario: nombre,
+          ApellidoUsuario: apellido,
+          Email: correo,
+          Genero: genero,
+          FechaNacimiento: fechaNacimiento,
+          Pais: pais,
+          Contrasenia: contrasenia,
+        }),
+        headers: {
+          'Content-type': 'application/json',
+        },
+      }
+    );
 
     if (peticion.ok) {
       // Mostrar registro exitoso como alerta

@@ -12,13 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
     try {
-      const peticion = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        body: JSON.stringify(datosUsuario),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
+      const peticion = await fetch(
+        'https://github.com/sr-roboto/LEXIMATE_FRONT_DEPLOY.git/login',
+        {
+          method: 'POST',
+          body: JSON.stringify(datosUsuario),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
 
       const respuesta = await peticion.json();
 
