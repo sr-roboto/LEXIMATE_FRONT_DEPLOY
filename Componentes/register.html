@@ -1,20 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
   <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
     href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" />
-  <link rel="stylesheet" href="/LEXIMATE-FRONT/CSS/form.css" />
-
+  <link rel="stylesheet" href="../CSS/form.css" />
   <title>LexiMate</title>
-  <link rel="icon" type="image/x-icon" href="/LEXIMATE-FRONT/assets/logo-leximate.png" />
-
+  <link rel="icon" type="image/x-icon" href="../assets/logo-leximate.png" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 </head>
 
 <body>
   <div class="relative flex size-full min-h-screen flex-col bg-[#FBF8EF] group/design-root overflow-x-hidden" style="
-        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(160,125,28)%27 viewBox=%270 0 256 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
+        --select-button-svg: url('data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724px%27 height=%2724px%27 fill=%27rgb(160,125,28)%27 viewBox=%270 0 256%27%3e%3cpath d=%27M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z%27%3e%3c/path%3e%3c/svg%3e');
         font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
       ">
     <div class="layout-container flex h-full grow flex-col">
@@ -23,32 +24,24 @@
         style="background-color: #f8f40c">
         <div class="flex items-center gap-4 text-[#1c1c0d]">
           <div class="size-4 w-10 h-10">
-            <img src="/LEXIMATE-FRONT/assets/logo-leximate.png" alt="Descripción de la imagen" />
+            <img src="../assets/logo-leximate.png" alt="Descripción de la imagen" />
           </div>
           <h2 class="text-[#1c1c0d] text-lg font-bold leading-tight tracking-[-0.015em]">
             LexiMate
           </h2>
         </div>
-        <div class="flex gap-2">
-          <a href="/LEXIMATE-FRONT/Componentes/iniciarSesion.html">
-            <button
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f4e7] text-[#1c1c0d] text-sm font-bold leading-normal tracking-[0.015em]">
-              <span class="truncate">Iniciar sesión</span>
-            </button>
-          </a>
-        </div>
+        <div class="flex gap-2"></div>
       </header>
-
-      <div class="gap-1 px-6 flex flex-col  flex-1 justify-start py-5">
+      <div class="gap-1 px-6 flex flex-col flex-1 justify-start py-5">
         <div class="flex flex-wrap justify-between gap-3 p-4">
           <p class="text-[#201A09] text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">
             Registrarse
           </p>
         </div>
-
-        <!-- FORM + BUTTON + IMAGE -->
-        <div class="flex" style="justify-content: space-around;">
-          <!-- FORM + BUTTON -->
+        <form id="form">
+          <!-- Aquí va el contenido del formulario -->
+          <div class="flex" style="justify-content: space-around;">
+            <!-- FORM + BUTTON -->
             <div class="layout-content-container flex flex-col flex-wrap max-w-[600px] flex-1">
               <div class="flex flex-wrap gap-2">
                 <div class="max-w-[480px] items-end mb-5">
@@ -56,7 +49,7 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Nombre
                     </p>
-                    <input id="inp-form"
+                    <input id="firstName"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
                       value="" />
                   </label>
@@ -66,7 +59,7 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Apellido
                     </p>
-                    <input id="inp-form"
+                    <input id="lastName"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
                       value="" />
                   </label>
@@ -76,12 +69,12 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Género
                     </p>
-                    <select id="inp-form"
+                    <select id="genero"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 bg-[image:--select-button-svg] placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal">
-                      <option value="one"></option>
-                      <option value="two">Masculino</option>
-                      <option value="three">Femenino</option>
-                      <option value="three">Otro</option>
+                      <option value=""></option>
+                      <option value="Masculino">Masculino</option>
+                      <option value="Femenino">Femenino</option>
+                      <option value="Otro">Otro</option>
                     </select>
                   </label>
                 </div>
@@ -90,7 +83,7 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Correo electrónico
                     </p>
-                    <input id="inp-form"
+                    <input id="emailAddress"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
                       value="" />
                   </label>
@@ -100,7 +93,7 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Fecha de nacimiento
                     </p>
-                    <input type="date" id="inp-form"
+                    <input type="date" id="birthDate"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
                       value="" />
                   </label>
@@ -110,9 +103,9 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       País
                     </p>
-                    <select id="inp-form"
+                    <select id="country"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 bg-[image:--select-button-svg] placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal">
-                      <option value="one"></option>
+                      <option value=""></option>
                       <option value="two">two</option>
                       <option value="three">three</option>
                     </select>
@@ -123,7 +116,17 @@
                     <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
                       Contraseña
                     </p>
-                    <input id="inp-form" placeholder="Al menos 8 caracteres"
+                    <input id="pwd" placeholder="Al menos 8 caracteres"
+                      class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
+                      value="" />
+                  </label>
+                </div>
+                <div class="max-w-[480px] items-end">
+                  <label class="flex flex-col min-w-40 flex-1">
+                    <p class="text-[#201A09] text-base font-medium leading-normal pb-2">
+                      Confirmar Contraseña
+                    </p>
+                    <input id="pwdConfirm" placeholder="Repite la contraseña"
                       class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-[#201A09] focus:outline-0 focus:ring-0 border border-[#EFE3C3] bg-[#FBF8EF] focus:border-[#EFE3C3] h-14 placeholder:text-[#A07D1C] p-[15px] text-base font-normal leading-normal"
                       value="" />
                   </label>
@@ -131,19 +134,18 @@
               </div>
               <div class="flex px-4 py-3 justify-start">
                 <button
-                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#f2f20d] text-[#181811] text-sm font-bold leading-normal tracking-[0.015em]">
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 flex-1 bg-[#f2f20d] text-[#181811] text-sm font-bold leading-normal tracking-[0.015em]"
+                  type="submit">
                   <span class="truncate">Registrarse</span>
                 </button>
               </div>
             </div>
-
-            <!-- IMAGE -->
-            <div id="img-register"></div>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
-  </div>
+  <script src="../js/register.js"></script>
 </body>
 
 </html>

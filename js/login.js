@@ -1,6 +1,7 @@
-const form = document.getElementById('form-cont');
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('login-form');
 
-const login = async (e) => {
+  const login = async (e) => {
     e.preventDefault();
 
     const emailUsuario = document.querySelector('.userEmail').value;
@@ -11,27 +12,33 @@ const login = async (e) => {
     const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
     try {
-        const peticion = await fetch('http://localhost:3000/login', {
-            method: "POST",
-            body: JSON.stringify(datosUsuario),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+      const peticion = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        body: JSON.stringify(datosUsuario),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-        const respuesta = await peticion.json();
+      const respuesta = await peticion.json();
 
-        if (!peticion.ok) {
-            $('#myModal').modal('show'); // Mostrar modal de error
-        } else {
-            localStorage.setItem('token', respuesta.token);
-            window.location.href = "../Componentes/home.html";
-        }
-    
+      if (!peticion.ok) {
+        alert('Error al iniciar sesión. Por favor, verifica tus credenciales.');
+      } else {
+        localStorage.setItem('token', respuesta.token);
+        window.location.href = '../Componentes/home.html';
+      }
     } catch (error) {
-        console.error('Error al intentar iniciar sesión:', error);
-        alert('Hubo un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde.');
+      console.error('Error al intentar iniciar sesión:', error);
+      alert(
+        'Hubo un error al intentar iniciar sesión. Por favor, inténtalo de nuevo más tarde.'
+      );
     }
-};
+  };
 
-form.addEventListener('submit', login);
+  if (form) {
+    form.addEventListener('submit', login);
+  } else {
+    console.error('El formulario con el ID "login-form" no se encontró.');
+  }
+});
