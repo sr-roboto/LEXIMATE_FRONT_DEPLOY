@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const peticion = await fetch(
-        'https://github.com/sr-roboto/LEXIMATE_FRONT_DEPLOY.git/login',
+        'https://potential-waddle-vj96xg6rrxq26wgr-3000.app.github.dev/login',
         {
           method: 'POST',
           body: JSON.stringify(datosUsuario),

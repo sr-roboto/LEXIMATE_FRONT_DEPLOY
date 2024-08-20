@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Realizar petición al servidor
     const peticion = await fetch(
-      'https://github.com/sr-roboto/LEXIMATE_FRONT_DEPLOY.git/register',
+      'https://potential-waddle-vj96xg6rrxq26wgr-3000.app.github.dev/register',
       {
         method: 'POST',
         body: JSON.stringify({
