@@ -12,16 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const datosUsuario = { Email: emailUsuario, Contrasenia: contrasenia };
 
     try {
-      const peticion = await fetch(
-        'https://potential-waddle-vj96xg6rrxq26wgr-3000.app.github.dev/login',
-        {
-          method: 'POST',
-          body: JSON.stringify(datosUsuario),
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
+      const peticion = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+        body: JSON.stringify(datosUsuario),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
       const respuesta = await peticion.json();
 

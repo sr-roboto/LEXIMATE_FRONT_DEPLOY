@@ -30,24 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Realizar petición al servidor
-    const peticion = await fetch(
-      'https://potential-waddle-vj96xg6rrxq26wgr-3000.app.github.dev/register',
-      {
-        method: 'POST',
-        body: JSON.stringify({
-          NombreUsuario: nombre,
-          ApellidoUsuario: apellido,
-          Email: correo,
-          Genero: genero,
-          FechaNacimiento: fechaNacimiento,
-          Pais: pais,
-          Contrasenia: contrasenia,
-        }),
-        headers: {
-          'Content-type': 'application/json',
-        },
-      }
-    );
+    const peticion = await fetch('http://localhost:3000/register', {
+      method: 'POST',
+      body: JSON.stringify({
+        NombreUsuario: nombre,
+        ApellidoUsuario: apellido,
+        Email: correo,
+        Genero: genero,
+        FechaNacimiento: fechaNacimiento,
+        Pais: pais,
+        Contrasenia: contrasenia,
+      }),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    });
 
     if (peticion.ok) {
       // Mostrar registro exitoso como alerta
